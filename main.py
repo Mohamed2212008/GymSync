@@ -1,7 +1,9 @@
-from db.database import Database
-from models.coach import Coach
-from models.owner import Owner
-from models.trainee import Trainee
+from backend.db.database import Database
+from backend.models.coach import Coach
+from backend.models.owner import Owner
+from backend.models.trainee import Trainee
+from backend import bridge
+import eel
 
 db = Database('GymSync')
 
@@ -10,7 +12,9 @@ db.execute("CREATE TABLE IF NOT EXISTS coach(id INTEGER PRIMARY KEY AUTOINCREMEN
 db.execute("CREATE TABLE IF NOT EXISTS trainee(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age INTEGER, gender TEXT, sport TEXT)")
 db.execute("CREATE TABLE IF NOT EXISTS owner(id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT NOT NULL, hashed_password TEXT NOT NULL)")
 
-# Owner.sign_up(db, "MohamedHamdy", '123')
-# print(Owner.log_in(db, "MohamedHamdy1", "123"))
+bridge.set_db(db)
+
+eel.init('gui')
+eel.start('signup.html')
 
 db.close_con()
