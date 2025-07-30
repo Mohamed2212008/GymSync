@@ -1,4 +1,4 @@
-#!/mnt/programming/python_programming/GymSync/venv/bin/python3
+#!/programming/python_programming/GymSync/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
