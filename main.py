@@ -10,7 +10,7 @@ bridge.set_db(db)
 
 gym = Gym(db)
 
-# eel.init('gui')
-# eel.start('signup.html')
+eel.init('gui')
+eel.start('signup.html')
 
 db.close_con()
