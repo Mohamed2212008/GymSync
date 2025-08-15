@@ -1,3 +1,4 @@
+# comment
 class Trainee:
     def __init__(self, id, name, age, gender, phone_num, sport, coach):
         self.id = id

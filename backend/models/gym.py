@@ -2,6 +2,8 @@ from .sport import Sport
 from .coach import Coach
 from .trainee import Trainee
 
+
+# comment
 class Gym:
     def __init__(self, db):
         self.db = db
