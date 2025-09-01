@@ -2,8 +2,6 @@ from .sport import Sport
 from .coach import Coach
 from .trainee import Trainee
 
-
-# comment
 class Gym:
     def __init__(self, db):
         self.db = db
@@ -75,3 +73,18 @@ class Gym:
         trainee_id = self.return_trainee_id(trainee_name)
         if trainee_id != False:
             Trainee.remove(self.db, trainee_id)
+            self.load_trainees()
+    
+    def count_coaches_in_sport(self, sport):
+        counter = 0
+        for coach in self.coaches:
+            if coach.sport == sport.title:
+                counter += 1
+        return counter
+    
+    def count_trainees_in_sport(self, sport):
+        counter = 0
+        for trainee in self.trainees:
+            if trainee.sport == sport.title:
+                counter += 1
+        return counter

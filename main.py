@@ -9,8 +9,12 @@ setup_schema(db)
 bridge.set_db(db)
 
 gym = Gym(db)
+bridge.set_gym(gym)
 
 eel.init('gui')
-eel.start('signup.html')
+if db.fetchall("owner") != []:
+    eel.start('registration/login.html')
+else:
+    eel.start('registration/signup.html')
 
 db.close_con()

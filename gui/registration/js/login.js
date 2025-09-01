@@ -15,5 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show message from Python
         login_message.textContent = response.message;
         login_message.style.color = response.success ? "green" : "var(--error-color)";
+
+        if (response.success) {
+            setTimeout(() => {
+                window.location.href = "../../dashboard/dashboard.html";
+            }, 1000);
+        }
     });
 });

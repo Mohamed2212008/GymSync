@@ -1,0 +1,48 @@
+/* pop-up styling */
+.modal {
+    transition: var(--transition);  
+    position: fixed;
+    display: none;
+    width: fit-content;
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 15px;
+    z-index: 2;
+    border: 1px solid var(--accent-color);
+}
+
+.modal .heading {
+    padding-bottom: 30px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal .btns {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal .btns .cancel {
+    width: fit-content;
+}
+
+body::after {
+    content: '';
+    transition: var(--transition);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: black;
+    z-index: -1;
+}
+
+.body::after {
+    z-index: 1;
+    opacity: 50%;
+}
+
+.remove-warning .btns button:last-child {
+    margin-left: 10px;
+}

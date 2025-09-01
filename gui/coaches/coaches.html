@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coaches</title>
+    <link rel="stylesheet" href="../shared/style/sidebar.css">
+    <link rel="stylesheet" href="../shared/style/main.css">
+    <link rel="stylesheet" href="../shared/style/container.css">
+    <link rel="stylesheet" href="../shared/style/modal.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <script src="../shared/js/sidebar.js" data-page="coaches"></script>
+    </div>
+    <div class="container">
+        <div class="heading">
+            <h1>coaches</h1>
+            <button id="add-btn">Add Coach</button>
+        </div>
+        <div class="content" id="coaches-div"></div>
+    </div>
+    <div class="modal" id="pop-up">
+        <div class="heading">
+            <h1>Add Coach</h1>
+        </div>
+        <form id="coach-form">
+            <input type="text" placeholder="Coach Name" required id="coach-name">
+            <input type="text" placeholder="Coach Phone Number" id="coach-phone-num">
+            <select name="sport" id="sport-select">
+                <option value="" selected>Select Coach Specialty</option>
+            </select>
+            <input type="submit" value="Add">
+        </form>
+        <div class="btns">
+            <button class="cancel" id="cancel">cancel</button>
+        </div>
+    </div>
+    <div class="modal remove-warning" id="delete-warning"></div>
+    <script src="/eel.js"></script>
+    <script src="../shared/js/modal.js"></script>
+    <script src="../shared/js/loadingSports.js"></script>
+    <script src="../shared/js/theme.js"></script>
+    <script type="module" src="../shared/js/delete_warning.js"></script>
+    <script type="module" src="js/coaches.js"></script>
+</body>
+</html>

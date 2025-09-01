@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainees</title>
+        <link rel="stylesheet" href="../shared/style/main.css">
+        <link rel="stylesheet" href="../shared/style/sidebar.css">
+        <link rel="stylesheet" href="../shared/style/container.css">
+        <link rel="stylesheet" href="../shared/style/modal.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <script src="../shared/js/sidebar.js" data-page="trainees"></script>
+    </div>
+    <div class="container">
+        <div class="heading">
+            <h1>Trainees</h1>
+            <button id="add-btn">Add Trainee</button>
+        </div>
+        <div class="content" id="content"></div>
+    </div>
+    <div class="modal" id="pop-up">
+        <div class="heading">
+            <h1>Add Trainee</h1>
+        </div>
+        <form id="add-trainee-form">
+            <input type="text" placeholder="Name" id="t-name" required>
+            <input type="number" placeholder="age" id="t-age" required>
+            <input type="text" placeholder="Phone Number" id="t-phone-num">
+            <select name="gender" id="gender-select">
+                <option value="1" selected>Male</option>
+                <option value="0">Female</option>
+            </select>
+            <select name="sport" id="sport-select">
+                <option value="" selected>select sport</option>
+            </select>
+            <select name="coaches" id="coach-select">
+                <option value="" selected>select coach</option>
+            </select>
+            <input type="submit" value="add">
+        </form>
+        <div class="btns">
+            <button class="cancel" id="cancel">cancel</button>
+        </div>
+    </div>
+    <div class="modal remove-warning" id="delete-warning"></div>
+    <script src="/eel.js"></script>
+    <script type="module" src="../shared/js/modal.js"></script>
+    <script src="../shared/js/loadingSports.js"></script>
+    <script src="js/loadingCoaches.js"></script>
+    <script src="../shared/js/theme.js"></script>
+    <script type="module" src="../shared/js/delete_warning.js"></script>
+    <script type="module" src="js/trainees.js"></script>
+</body>
+</html>

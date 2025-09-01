@@ -16,11 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Call Python function
-        console.log("I'm still here")
         const response = await eel.handle_signup(username, password)();
 
         // Show message from Python
         message.textContent = response.message;
         message.style.color = response.success ? "green" : "var(--error-color)";
+
+        if (response.success) {
+            setTimeout(() => {
+                window.location.href = "../../dashboard/dashboard.html";
+            }, 1000);
+        }
     });
 });

@@ -16,7 +16,6 @@ class Coach:
                 FROM coach
                 INNER JOIN sport ON coach.sport_id = sport.id
         """).fetchall()
-        print(coaches)
         return [Coach(coach[0], coach[1], coach[2], coach[3]) for coach in coaches]
 
     @staticmethod

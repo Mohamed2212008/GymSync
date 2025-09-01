@@ -23,7 +23,7 @@ class Owner:
                 return False
         else:
             return False
-    
+
     @staticmethod
     def check_account_exists(db, username = None):
         account = db.fetchall("owner")

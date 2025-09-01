@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../shared/style/main.css">
+    <link rel="stylesheet" href="../shared/style/sidebar.css">
+    <link rel="stylesheet" href="../shared/style/container.css">
+    <link rel="stylesheet" href="../shared/style/modal.css">
+    <title>Sports</title>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <script src="../shared/js/sidebar.js" data-page="sports"></script>
+    </div>
+    <div class="container">
+        <div class="heading">
+            <h1>Sports</h1>
+            <button id="add-btn">Add Sport</button>
+        </div>
+        <div class="sports content" id="sportsDev"></div>
+    </div>
+    <div class="modal" id="pop-up">
+        <h1 class="heading">Add Sport</h1>
+        <form id="sport-form">
+            <input type="text" name="sport-name" id="sport-name" placeholder="Sport Name" required>
+            <input type="text" name="sport-type" id="sport-type" placeholder="Sport Type" required>
+            <input type="submit" value="Add Sport" class="button">
+        </form>
+        <div class="btns">
+            <button class="cancel" id="cancel">cancel</button>
+        </div>
+    </div>
+    <div class="modal remove-warning" id="delete-warning"></div>
+    <script src="/eel.js"></script>
+    <script src="../shared/js/modal.js"></script>
+    <script type="module" src="../shared/js/delete_warning.js"></script>
+    <script src="../shared/js/theme.js"></script>
+    <script type="module" src="js/sports.js"></script>
+</body>
+</html>

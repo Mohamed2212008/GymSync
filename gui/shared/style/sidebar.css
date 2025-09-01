@@ -1,0 +1,72 @@
+/* Sidebar base */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 240px;
+  background-color: var(--form-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: var(--font-family);
+  transition: var(--transition);
+}
+
+/* Header */
+.sidebar-header h2 {
+  color: var(--accent-color);
+  font-size: 22px;
+  margin: 0 0 20px 0;
+}
+
+/* Nav */
+.sidebar-nav {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebar-nav a:hover {
+  background-color: var(--input-bg);
+  color: var(--accent-color);
+}
+
+.sidebar-nav a.active {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+/* Footer (Theme Toggle) */
+.sidebar-footer {
+  margin-top: auto;
+}
+
+#theme-toggle {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--accent-color);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#theme-toggle:hover {
+  background-color: var(--accent-hover);
+}
